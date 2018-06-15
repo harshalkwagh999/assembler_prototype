@@ -1,0 +1,60 @@
+     1                                  section .data
+     2 00000000 0F000000                	dvar dd 15
+     3 00000004 0A000000280000001E-     	dvar1 dd 10,40,30
+     4 0000000D 000000             
+     5 00000010 5475736861720A00        	dvar2 db "Tushar",10,0
+     6 00000018 6900                    	dvar3 dw 105
+     7 0000001A 9A05000000000000        	dvar4 dq 1434
+     8                                  section .bss
+     9 00000000 <res 0000000A>          	bvar1 resb 10
+    10 0000000A <res 00000004>          	bvar2 resd 1
+    11 0000000E <res 00000002>          	bvar3 resw 1
+    12                                  section .text
+    13                                  	global main
+    14                                  main:
+    15 00000000 6689CB                  	mov bx,cx
+    16 00000003 89D8                    	mov eax,ebx
+    17 00000005 8B1D[00000000]          	mov ebx,dword[dvar]
+    18 0000000B 891D[00000000]          	mov dword[dvar],ebx
+    19 00000011 668B1D[18000000]        	mov bx,word[dvar3]
+    20 00000018 66891D[18000000]        	mov word[dvar3],bx
+    21 0000001F B814000000              	mov eax,20
+    22 00000024 C705[00000000]6400-     	mov dword[dvar],100
+    23 0000002C 0000               
+    24 0000002E 6601CB                  	add bx,cx
+    25 00000031 01D8                    	add eax,ebx
+    26 00000033 031D[00000000]          	add ebx,dword[dvar]
+    27 00000039 011D[00000000]          	add dword[dvar],ebx
+    28 0000003F 66031D[18000000]        	add bx,word[dvar3]
+    29 00000046 66011D[18000000]        	add word[dvar3],bx
+    30 0000004D 83C014                  	add eax,20
+    31 00000050 8305[00000000]0A        	add dword[dvar],10
+    32 00000057 6629CB                          sub bx,cx
+    33 0000005A 29D8                    	sub eax,ebx
+    34 0000005C 2B1D[00000000]          	sub ebx,dword[dvar]
+    35 00000062 291D[00000000]          	sub dword[dvar],ebx
+    36 00000068 662B1D[18000000]        	sub bx,word[dvar3]
+    37 0000006F 66291D[18000000]        	sub word[dvar3],bx
+    38 00000076 83E814                  	sub eax,20
+    39 00000079 832D[00000000]0A        	sub dword[dvar],10
+    40 00000080 6639CB                  	cmp bx,cx
+    41 00000083 39D8                    	cmp eax,ebx
+    42 00000085 3B1D[00000000]          	cmp ebx,dword[dvar]
+    43 0000008B 391D[00000000]          	cmp dword[dvar],ebx
+    44 00000091 663B1D[18000000]        	cmp bx,word[dvar3]
+    45 00000098 66391D[18000000]        	cmp word[dvar3],bx
+    46 0000009F 83F814                  	cmp eax,20
+    47 000000A2 833D[00000000]0A        	cmp dword[dvar],10	
+    48 000000A9 66F7E3                  	mul bx
+    49 000000AC F7E2                    	mul edx
+    50 000000AE F725[00000000]          	mul dword[dvar]
+    51 000000B4 66F7F3                  	div bx
+    52 000000B7 F7F3                    	div ebx
+    53 000000B9 66F735[18000000]        	div word[dvar3]
+    54 000000C0 43                      	inc ebx
+    55 000000C1 42                      	inc edx
+    56 000000C2 FF05[00000000]          	inc dword[dvar]
+    57 000000C8 4B                      	dec ebx
+    58 000000C9 FF0D[00000000]          	dec dword[dvar]
+    59 000000CF F7D3                    	not ebx
+    60 000000D1 F715[00000000]          	not dword[dvar]

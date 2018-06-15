@@ -1,0 +1,14 @@
+0 Invalid input format
+1 Invalid opcode
+2 No operand for data declairation
+3 Label without colon
+4 Uninitialised space declaired in non-bss section
+5 Attempt to initialise variable in bss section
+6 Byte/Word data exceeds bound
+7 Invalide combination of operator and operands
+8 Undefined symbole
+9 Symbole is redefined
+10 Missmatch in operand size
+11 Expression syntax error
+12 Expected comma OR colon at the end of line
+13 Invalid lable name

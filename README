@@ -1,0 +1,18 @@
+
+             --------------------------------  ASSEMBLER  -----------------------------------
+
+This TAR file contains working 2-PASS Assembler Prototype.
+
+This tar contain all .c files, some neccessory files for maintaining Required Data structure for Assembler like: OPTAB REGTAB ERRTAB etc, with a MAKEFILE, sample input file and intermediate file, output file.
+
+COMPILE:
+
+	make
+
+RUN:
+	./asmProto input.asm
+
+CLEAN:
+	make clean
+
+this will create output.obj file which contain object code of given input file.
