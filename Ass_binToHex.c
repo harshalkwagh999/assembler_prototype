@@ -13,7 +13,7 @@ char* bin_hex(char* oprnd)
 
   len=strlen(str1);
   result=atoi(str1);//convert to digit(integer)
-  for(i=0;i<len;i++)//logic for bin to hex conversion
+  for(i=0;i<len;i++)//logic for bin to dec conversion
     {
       val1 +=((result%10)*pow(2,i));
       result=result/10;
@@ -21,7 +21,7 @@ char* bin_hex(char* oprnd)
 
   len=strlen(str2);
   result=atoi(str2);//convert to digit(integer)
-  for(i=0;i<len;i++)//logic for bin to hex conversion
+  for(i=0;i<len;i++)//logic for bin to dec conversion
     {
       val2 +=((result%10)*pow(2,i));
       result=result/10;

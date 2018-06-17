@@ -1,7 +1,7 @@
 section .data
 	dvar dd 15
 	dvar1 dd 10,40,30
-	dvar2 db "Tushar",10,0
+	dvar2 db "Harshal",10,0
 	dvar3 dw 105
 	dvar4 dq 1434
 section .bss
